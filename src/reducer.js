@@ -4,26 +4,26 @@ export const initialState = {
 };
 
 export const getBasketTotal = (basket) =>
-  basket?.reduce((amount, item) => item.price + amount, 0);
+       basket?.reduce((amount, item) => item.price + amount, 0);
 
 const reducer = (state, action) => {
-  //   console.log(action);
+    // console.log(action);
   switch (action.type) {
     case "ADD_TO_BASKET":
       // logic for adding to basket
       return {
         ...state,
         basket: [...state.basket, action.item],
+
       };
     case "REMOVE_FROM_BASKET":
-      //logic for removing item from basket...
-      
+      //logic for removing item from basket...     
       //clone the basket
       let newBasket = [...state.basket];
       const index = state.basket.findIndex(
         (basketItem) => basketItem.id === action.id
+        
       );
-
       // we check to see if product exists
       if (index >= 0) {
         //if exists in basket, remove it // 
@@ -33,7 +33,6 @@ const reducer = (state, action) => {
           `Cant remove product (id: ${action.id}) as its not in basket!`
         );
       }
-
       return {
         ...state,
         basket: newBasket,
