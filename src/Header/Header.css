@@ -72,3 +72,11 @@
 .header__clearlink {
     text-decoration: none;
 }
+.secondHeader {
+    display: flex;
+    align-content: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+}
