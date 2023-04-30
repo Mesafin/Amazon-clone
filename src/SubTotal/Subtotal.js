@@ -13,6 +13,7 @@ function Subtotal() {
       const navigate = useNavigate();
   return (
     <div className="subtotal">
+      
       <CurrencyFormat
         renderText={(value) => (
           <div>
@@ -32,6 +33,7 @@ function Subtotal() {
       />
       <button onClick={() => navigate("/payment")} >Proceed to Checkout</button>
     </div>
+    
   );
 }
 
